@@ -33,7 +33,3 @@ app.delete("/things/:idThing", (req, res) => {
 
   res.status(200).json({ message: "Id deleted" });
 });
-
-app.use((req, res) => {
-  res.status(404).json({ message: "Endpoint not found" });
-});
