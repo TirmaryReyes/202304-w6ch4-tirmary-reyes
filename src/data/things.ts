@@ -2,8 +2,8 @@ import { type ThingsStructure } from "../types";
 
 const things: ThingsStructure[] = [
   {
-    id: "82",
-    name: "No commit in master",
+    idThing: "82",
+    things: "No commit in master",
   },
 ];
 

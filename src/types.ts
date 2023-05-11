@@ -1,7 +1,7 @@
 export interface ThingsDataStructure {
-  name: string;
+  things: string;
 }
 
 export interface ThingsStructure extends ThingsDataStructure {
-  id: string;
+  idThing: string;
 }
