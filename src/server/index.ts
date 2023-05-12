@@ -1,10 +1,13 @@
 import express from "express";
 import morgan from "morgan";
 import things from "../data/things.js";
+import { ThingsStructure } from "../types.js";
 
 export const app = express();
 
 app.use(morgan("dev"));
+
+app.use(express.json());
 
 app.get("/things", (req, res) => {
   res.status(200).json({ things });
@@ -32,4 +35,8 @@ app.delete("/things/:idThing", (req, res) => {
   things.splice(thingPosition, 1);
 
   res.status(200).json({ message: "Id deleted" });
+});
+
+app.use((req, res) => {
+  res.status(404).json({ message: "Endpoint not found" });
 });
