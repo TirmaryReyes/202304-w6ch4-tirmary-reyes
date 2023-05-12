@@ -1,7 +1,6 @@
 import express from "express";
 import morgan from "morgan";
 import things from "../data/things.js";
-import { ThingsStructure } from "../types.js";
 
 export const app = express();
 
